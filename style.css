@@ -1,0 +1,103 @@
+/* blues:#edf2fb // #d7e3fc // #ccdbfd // #c1d3fe // #abc4ff */
+/* grays:#d1d1d1 // #e1dbd6 // #e2e2e2 // #f9f6f2 // #ffffff */
+*{
+  margin:0;
+  padding:0;
+  --pagecolor:#edf2fb;
+  --sidepanelcolor:#d7e3fc;
+  --familycolor:#abc4ff;
+  --othercolor:#ffffff;
+}
+canvas {
+  height:900px;
+  width:1400px;
+  background-color: antiquewhite;
+  display:none;
+}
+#container{
+  display:grid;
+  grid-template-columns: 5fr 250px;
+}
+#graphcontainer{
+  position:relative;
+}
+#graph{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%);
+  background-color: var(--pagecolor);
+  padding:10px;
+  border-radius: 5px;
+}
+#sidepanel{
+  margin-top: 10px;
+  padding:2px;
+  font-size: 10px;
+  background-color: var(--sidepanelcolor);
+}
+#sidepanel *{
+  margin:2px;
+  padding:2px;
+}
+
+#parents{
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+}
+
+.card{
+  width:200px;
+  height:50px;
+  border:solid 1px darkgray;
+}
+.horizontalline{
+  border-top:2px solid black;
+  margin-top:25px;
+}
+.verticalline {
+  position: relative;
+  height: 40px;
+  width: 0px;
+  left: 50%;
+  margin-top: -26px;
+  margin-bottom: -49px;
+  border-right: 2px solid black;
+}
+div#siblings {
+    margin-top: 50px;
+    left: 50%;
+    transform: translate(-100px, 0px);
+    position: relative;
+    width: 100%;
+}
+#children{
+  margin-top:100px;
+  display:flex;
+  justify-content: center;
+  /* grid-template-columns: 1fr 1fr; */
+}
+#verticallines{
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -67px;
+  width: 401px;
+  transform: translate(-100px,0);
+}
+.card.partner{
+  background: cornsilk;
+}
+#existingpersons{
+  height:200px;
+  border:1px solid darkgray;
+  overflow:scroll;
+}
+li{
+  user-select: none;
+  list-style: none;
+}
+#relationshipgroup{
+  display:none;
+}
+

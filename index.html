@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Family Tree</title>
+</head>                                 
+
+<body>
+  <canvas id="canvas1">
+
+  </canvas>
+  <div id="container">
+    <div id="graphcontainer">
+
+      <div id="graph">
+        
+        <div id="parents">
+          <div id="parent1" class="parent droppable card">
+          </div>
+          <div class="horizontalline"></div>
+          <div id="parent2" class="parent droppable card">
+          </div>
+        </div>
+        <div class="verticalline"></div>
+        <div id="siblings">
+          
+          <div id="person" data-person-id="" class="card">
+            <span id="nextsibling">
+              >
+            </span>
+          </div>
+          <div id="partner" class="partner droppable card">
+          </div>
+        </div>
+        
+        <div class="horizontalline"></div>
+        <div id="verticallines">
+          <div class="verticalline"></div>
+          <div class="verticalline"></div>
+        </div>
+        <div id="children">
+          <div class="childandpartner">
+            <div class="child card"></div>
+            <div class="partner card"></div>
+          </div>
+        </div>
+        <!-- closing graph div -->
+      </div>
+    </div>
+    <div id="sidepanel">
+      <div id="persontoadd">
+        <h3>Add person</h3>
+        <label for="name">Name</label>
+        <input id="name" type="text">
+        <label>Sex:</label>
+        <input id="male" name="sex" type="radio">
+        <label for="male">Male</label>
+        <input id="female" name="sex" type="radio">
+        <label for="female">Female</label>
+        <input id="other" name="sex" type="radio">
+        <label for="other">Other</label>
+        <div id="relationshipgroup">
+          <label>Relationship:</label>
+          <input id="rel_parent" name="relationship" type="radio">
+          <label for="rel_parent">Parent</label>
+          <input id="rel_partner" name="relationship" type="radio">
+          <label for="rel_partner">Partner</label>
+          <input id="rel_child" name="relationship" type="radio">
+          <label for="rel_child">Child</label>
+          <input id="rel_sibling" name="relationship" type="radio">
+          <label for="rel_sibling">Sibling</label>
+        </div>        
+        
+        <br>
+
+
+        <button id="addperson">Add</button>
+      </div>
+
+      <h3>Persons added</h3>
+      <ul id="existingpersons">
+
+      </ul>
+    </div>
+  </div> 
+  
+  <script type="module">
+    import { v4 as uuidv4 } from "https://jspm.dev/uuid"
+    window.uuidv4 = uuidv4
+  </script>
+  <!-- <script src="https://jspm.dev/uuid"></script> -->
+  <script src="persons.js"></script>
+  <script src="person.js"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
