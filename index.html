@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Family Tree</title>
-</head>                                 
+</head>
 
 <body>
   <canvas id="canvas1">
@@ -18,6 +18,43 @@
 
       <div id="graph">
         
+        <div id="grandgrandparents">
+          <div id="parent111" class="grandgrandparent card">
+            fdfgdfg fgfgsfd
+          </div>
+          <div id="parent112" class="grandgrandparent card">
+          </div>
+
+          <div id="parent121" class="grandgrandparent card">
+          </div>
+          <div id="parent122" class="grandgrandparent card">
+          </div>
+
+          <div id="ggpdivider" class="card"></div>
+
+          <div id="parent211" class="grandgrandparent card">
+          </div>
+          <div id="parent212" class="grandgrandparent card">
+          </div>
+          
+          <div id="parent221" class="grandgrandparent card">
+          </div>
+          <div id="parent222" class="grandgrandparent card">
+          </div>
+        </div>
+
+        <div id="grandparents">
+          <div id="parent11" class="grandparent card">
+            abc sdfsdf sdfsdf
+          </div>
+          <div id="parent12" class="grandparent card">
+          </div>
+          <div id="gpdivider" class="card"></div>
+          <div id="parent21" class="grandparent card">
+          </div>
+          <div id="parent22" class="grandparent card">
+          </div>
+        </div>
         <div id="parents">
           <div id="parent1" class="parent droppable card">
           </div>
@@ -27,16 +64,20 @@
         </div>
         <div class="verticalline"></div>
         <div id="siblings">
-          
-          <div id="person" data-person-id="" class="card">
-            <span id="nextsibling">
-              >
-            </span>
+          <div id="personholder">
+            <div id="previoussibling" class="triangle_left" title="Previous sibling"></div>
+            <div id="person" data-person-id="" class="card">
+            </div>
+            <div id="nextsibling" class="triangle_right" title="Next sibling"></div>
           </div>
-          <div id="partner" class="partner droppable card">
+          <div id="partnerholder">
+            <div  class="triangle_left" style="visibility:hidden" ></div>
+            <div id="partner" class="partner droppable card">
+            </div>
+            <div class="triangle_right" style="visibility:hidden"></div>
           </div>
         </div>
-        
+
         <div class="horizontalline"></div>
         <div id="verticallines">
           <div class="verticalline"></div>
@@ -73,11 +114,8 @@
           <label for="rel_child">Child</label>
           <input id="rel_sibling" name="relationship" type="radio">
           <label for="rel_sibling">Sibling</label>
-        </div>        
-        
+        </div>
         <br>
-
-
         <button id="addperson">Add</button>
       </div>
 
@@ -86,8 +124,8 @@
 
       </ul>
     </div>
-  </div> 
-  
+  </div>
+
   <script type="module">
     import { v4 as uuidv4 } from "https://jspm.dev/uuid"
     window.uuidv4 = uuidv4
